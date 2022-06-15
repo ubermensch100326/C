@@ -261,8 +261,8 @@ int main(void)
 
 
 	// 15번 문제
-	/*int arr[2][3] = { {1, 2, 3}, {7, 8, 9} };
-	printf("arr[1]의 값 : %d\n", arr[1]);
+	int arr[2][3] = { {1, 2, 3}, {7, 8, 9} };
+	/*printf("arr[1]의 값 : %d\n", arr[1]);
 	printf("*(&arr[1])의 값 : %d\n", *(&arr[1]));
 	printf("&arr[1][0]의 값 : %d\n", &arr[1][0]);
 	printf("&arr[1][1]의 값 : %d\n", &arr[1][1]);
