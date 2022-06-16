@@ -80,7 +80,8 @@ https://rasino.tistory.com/337
 
 
 3. [Git 경고 메세지] LF will be replaced by CRLF in 
-git config --global core.autocrlf true
+윈도우 : git config --global core.autocrlf true
+리눅스 : git config --global core.autocrlf true input
 명령어 켜주기
 출처 : https://cocoon1787.tistory.com/728
 
@@ -96,4 +97,7 @@ gcc -v, g++ -v로 설치 확인
 4. WSL ubuntu 환경 구축
 일단 Linux 설치, vscode wsl extension 설치, vscode wsl c/c++ extension 등 설치, WSL c/c++ compiler 설치까지는 해놨음
 출처 : https://webnautes.tistory.com/1158
+
+
+5. 
 */
