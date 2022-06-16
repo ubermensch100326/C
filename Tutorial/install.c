@@ -90,5 +90,10 @@ git config --global core.autocrlf true
 압축해제하고 나온 mingw64 폴더를 C:에 바로 복붙
 환경 변수 설정에서 경로 추가에 C:\mingw64, C:\mingw64\bin 추가
 gcc -v, g++ -v로 설치 확인
+출처 : https://youtu.be/Zcy981HhGw0
 
+
+4. WSL ubuntu 환경 구축
+일단 Linux 설치, vscode wsl extension 설치, vscode wsl c/c++ extension 등 설치, WSL c/c++ compiler 설치까지는 해놨음
+출처 : https://webnautes.tistory.com/1158
 */

@@ -1,25 +1,25 @@
 /*
-í¬ì¸í„° ê´€ë ¨ ê°œë…
+Æ÷ÀÎÅÍ °ü·Ã °³³ä
 
 
-1. ì°¸ì¡°ì™€ ì—­ì°¸ì¡°
-ì°¸ì¡° (Reference)ëŠ” í¬ì¸í„° ë³€ìˆ˜ë¥¼ ì„¤ì •í•˜ê¸° ìœ„í•´ ê¸°ì¡´ ë³€ìˆ˜ì—ë‹¤ ampersand (&)ë¥¼ ì´ìš©í•˜ì—¬ ì£¼ì†Œê°’ì„ í• ë‹¹í•˜ëŠ” ê²ƒì„ ë§í•œë‹¤
-ì—­ì°¸ì¡° (Dereference)ëŠ” í¬ì¸í„° ë³€ìˆ˜ì— asterisk (*)ë¥¼ ì‚¬ìš©í•˜ì—¬ í¬ì¸í„°ê°€ ê°€ë¦¬í‚¤ëŠ” ë©”ëª¨ë¦¬ ì£¼ì†Œë¡œë¶€í„° í•´ë‹¹ ê°’ì— ì ‘ê·¼í•˜ëŠ” ê²ƒì„ ë§í•œë‹¤
-(í¬ì¸í„°ì— ì£¼ì†Œê°’ì„ í• ë‹¹í•  ë•Œ) ampersandëŠ” ì°¸ì¡° ì—°ì‚°ìžì´ê³  "address of"ë¡œ í•´ì„í•  ìˆ˜ ìžˆë‹¤
-(í¬ì¸í„°ë¡œ ê°’ì— ì ‘ê·¼í•  ë•Œ) asteriskëŠ” ì—­ì°¸ì¡° ì—°ì‚°ìžì´ê³  "value pointed by"ë¡œ í•´ì„í•  ìˆ˜ ìžˆë‹¤
-ì¶œì²˜ : https://stackoverflow.com/questions/14224831/meaning-of-referencing-and-dereferencing-in-c
+1. ÂüÁ¶¿Í ¿ªÂüÁ¶
+ÂüÁ¶ (Reference)´Â Æ÷ÀÎÅÍ º¯¼ö¸¦ ¼³Á¤ÇÏ±â À§ÇØ ±âÁ¸ º¯¼ö¿¡´Ù ampersand (&)¸¦ ÀÌ¿ëÇÏ¿© ÁÖ¼Ò°ªÀ» ÇÒ´çÇÏ´Â °ÍÀ» ¸»ÇÑ´Ù
+¿ªÂüÁ¶ (Dereference)´Â Æ÷ÀÎÅÍ º¯¼ö¿¡ asterisk (*)¸¦ »ç¿ëÇÏ¿© Æ÷ÀÎÅÍ°¡ °¡¸®Å°´Â ¸Þ¸ð¸® ÁÖ¼Ò·ÎºÎÅÍ ÇØ´ç °ª¿¡ Á¢±ÙÇÏ´Â °ÍÀ» ¸»ÇÑ´Ù
+(Æ÷ÀÎÅÍ¿¡ ÁÖ¼Ò°ªÀ» ÇÒ´çÇÒ ¶§) ampersand´Â ÂüÁ¶ ¿¬»êÀÚÀÌ°í "address of"·Î ÇØ¼®ÇÒ ¼ö ÀÖ´Ù
+(Æ÷ÀÎÅÍ·Î °ª¿¡ Á¢±ÙÇÒ ¶§) asterisk´Â ¿ªÂüÁ¶ ¿¬»êÀÚÀÌ°í "value pointed by"·Î ÇØ¼®ÇÒ ¼ö ÀÖ´Ù
+ÃâÃ³ : https://stackoverflow.com/questions/14224831/meaning-of-referencing-and-dereferencing-in-c
 
 
-2. CPUì™€ RAM
-CPU ë ˆì§€ìŠ¤í„°ëŠ” ë©”ëª¨ë¦¬ ì£¼ì†Œë¥¼ ì´ìš©í•˜ì—¬ RAMì— ì €ìž¥ë˜ì–´ ìžˆëŠ” ë°ì´í„°ì— ì ‘ê·¼í•œë‹¤
-CPU ë ˆì§€ìŠ¤í„°ëŠ” ê¸°ë³¸ ë‹¨ìœ„ê°€ 1ë¹„íŠ¸ì´ê³  RAMì˜ ê¸°ë³¸ ë‹¨ìœ„ëŠ” 1ë°”ì´íŠ¸ (8ë¹„íŠ¸)ì´ë‹¤
-ë ˆì§€ìŠ¤í„°ì˜ 1ë¹„íŠ¸ëŠ” ë©”ëª¨ë¦¬ì˜ ê°œë³„ ë°”ì´íŠ¸ë¥¼ ì°¸ì¡°í•  ìˆ˜ ìžˆë‹¤
-32ë¹„íŠ¸ ì‹œìŠ¤í…œì—ì„œëŠ” í•œ ë²ˆì— 2^32ê°œì˜ ì£¼ì†Œê°’ì„ ì²˜ë¦¬í•  ìˆ˜ ìžˆë‹¤
-RAMì˜ ê¸°ë³¸ ë‹¨ìœ„ëŠ” 1ë°”ì´íŠ¸ì´ê¸° ë•Œë¬¸ì— ì£¼ì†Œë„ 1ë°”ì´íŠ¸ ë‹¨ìœ„ë¡œ ë°”ë€ë‹¤
-ë”°ë¼ì„œ 32ë¹„íŠ¸ ì‹œìŠ¤í…œì—ì„œëŠ” ìµœëŒ€ 2^32*(1ë°”ì´íŠ¸)ì¸ ì•½ 4ê¸°ê°€ë°”ì´íŠ¸ì˜ RAMê¹Œì§€ ì²˜ë¦¬í•  ìˆ˜ ìžˆë‹¤
-64ë¹„íŠ¸ ì‹œìŠ¤í…œì—ì„œëŠ” í•œ ë²ˆì— 2^64ê°œì˜ ì£¼ì†Œê°’ì„ ì²˜ë¦¬í•  ìˆ˜ ìžˆê³  ë”°ë¼ì„œ ìµœëŒ€ë¡œ ì²˜ë¦¬í•  ìˆ˜ ìžˆëŠ” RAMì˜ ìš©ëŸ‰ë„ ì»¤ì§„ë‹¤
-í¬ì¸í„°ì˜ í¬ê¸°ëŠ” 32ë¹„íŠ¸ ì‹œìŠ¤í…œì—ì„œëŠ” 4ë°”ì´íŠ¸, 64ë¹„íŠ¸ ì‹œìŠ¤í…œì—ì„œëŠ” 8ë°”ì´íŠ¸ì´ë‹¤
-ì¶œì²˜ : https://learn-news.info/17
+2. CPU¿Í RAM
+CPU ·¹Áö½ºÅÍ´Â ¸Þ¸ð¸® ÁÖ¼Ò¸¦ ÀÌ¿ëÇÏ¿© RAM¿¡ ÀúÀåµÇ¾î ÀÖ´Â µ¥ÀÌÅÍ¿¡ Á¢±ÙÇÑ´Ù
+CPU ·¹Áö½ºÅÍ´Â ±âº» ´ÜÀ§°¡ 1ºñÆ®ÀÌ°í RAMÀÇ ±âº» ´ÜÀ§´Â 1¹ÙÀÌÆ® (8ºñÆ®)ÀÌ´Ù
+·¹Áö½ºÅÍÀÇ 1ºñÆ®´Â ¸Þ¸ð¸®ÀÇ °³º° ¹ÙÀÌÆ®¸¦ ÂüÁ¶ÇÒ ¼ö ÀÖ´Ù
+32ºñÆ® ½Ã½ºÅÛ¿¡¼­´Â ÇÑ ¹ø¿¡ 2^32°³ÀÇ ÁÖ¼Ò°ªÀ» Ã³¸®ÇÒ ¼ö ÀÖ´Ù
+RAMÀÇ ±âº» ´ÜÀ§´Â 1¹ÙÀÌÆ®ÀÌ±â ¶§¹®¿¡ ÁÖ¼Òµµ 1¹ÙÀÌÆ® ´ÜÀ§·Î ¹Ù²ï´Ù
+µû¶ó¼­ 32ºñÆ® ½Ã½ºÅÛ¿¡¼­´Â ÃÖ´ë 2^32*(1¹ÙÀÌÆ®)ÀÎ ¾à 4±â°¡¹ÙÀÌÆ®ÀÇ RAM±îÁö Ã³¸®ÇÒ ¼ö ÀÖ´Ù
+64ºñÆ® ½Ã½ºÅÛ¿¡¼­´Â ÇÑ ¹ø¿¡ 2^64°³ÀÇ ÁÖ¼Ò°ªÀ» Ã³¸®ÇÒ ¼ö ÀÖ°í µû¶ó¼­ ÃÖ´ë·Î Ã³¸®ÇÒ ¼ö ÀÖ´Â RAMÀÇ ¿ë·®µµ Ä¿Áø´Ù
+Æ÷ÀÎÅÍÀÇ Å©±â´Â 32ºñÆ® ½Ã½ºÅÛ¿¡¼­´Â 4¹ÙÀÌÆ®, 64ºñÆ® ½Ã½ºÅÛ¿¡¼­´Â 8¹ÙÀÌÆ®ÀÌ´Ù
+ÃâÃ³ : https://learn-news.info/17
 
 */
 
@@ -28,7 +28,7 @@ int main(void)
 {
     int a = 20;
     int* ptr = &a;
-    printf("Hello World!!");
+    printf("1l¤Ó|Å×½ºÆ®");
 
     return 0;
 }
