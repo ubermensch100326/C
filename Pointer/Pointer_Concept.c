@@ -27,8 +27,10 @@ RAM의 기본 단위는 1바이트이기 때문에 주소도 1바이트 단위로 바뀐다
 int main(void)
 {
     int a = 20;
-    int* ptr = &a;
+    int *ptr = &a;
     printf("1lㅣ|테스트");
 
     return 0;
 }
+
+// test
